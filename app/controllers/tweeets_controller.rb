@@ -4,6 +4,7 @@ class TweeetsController < ApplicationController
   # GET /tweeets or /tweeets.json
   def index
     @tweeets = Tweeet.all.order('created_at DESC')
+    @tweeet = Tweeet.new # this so that it doesn't redirect to the show page but the same landing page
   end
 
   # GET /tweeets/1 or /tweeets/1.json
